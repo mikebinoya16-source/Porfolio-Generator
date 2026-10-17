@@ -9,13 +9,17 @@
 
     <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2" defer></script>
     <script src="/js/supabase-config.js" defer></script>
+    <script src="/js/portfolio-access.js" defer></script>
     <script src="/js/portfolio-storage.js" defer></script>
     <script src="/js/templates/minimal-editor.js" defer></script>   
 
 </head>
 <body>
     <header class="topbar">
-        <a href="/" class="brand">Portech<span>.</span></a>
+        <a href="/templates" class="brand">
+            <img src="/images/logo.png" alt="">
+            <span>Portech</span>
+        </a>
         <a href="/templates" class="back-link">← Back to Templates</a>
     </header>
 
@@ -27,30 +31,30 @@
 
             <form id="minimalForm">
                 <label for="minimalName">Full name</label>
-                <input id="minimalName" value="Your Name" maxlength="80" required>
+                <input id="minimalName" placeholder="e.g. Alex Morgan" maxlength="80" required>
 
                 <label for="minimalTitle">Professional title</label>
-                <input id="minimalTitle" value="IT Student" maxlength="100">
+                <input id="minimalTitle" placeholder="e.g. IT Student" maxlength="100">
 
                 <label for="minimalPhoto">Profile photo</label>
                 <input id="minimalPhoto" type="file" accept="image/*">
                 <p class="hint">Optional. Maximum size: 5 MB.</p>
 
                 <label for="minimalAbout">About me</label>
-                <textarea id="minimalAbout" rows="4" maxlength="1000">I am an IT student who enjoys learning about technology, building projects, and improving my skills.</textarea>
+                <textarea id="minimalAbout" rows="4" maxlength="1000" placeholder="Share a short introduction about yourself."></textarea>
 
                 <label for="minimalSkills">Skills</label>
-                <input id="minimalSkills" value="HTML, CSS, JavaScript, PHP, Laravel">
+                <input id="minimalSkills" placeholder="e.g. HTML, CSS, JavaScript, PHP">
                 <p class="hint">Separate each skill with a comma.</p>
 
                 <label for="minimalProjectTitle">Featured project</label>
-                <input id="minimalProjectTitle" value="My First Project" maxlength="100">
+                <input id="minimalProjectTitle" placeholder="e.g. My First Project" maxlength="100">
 
                 <label for="minimalProjectDescription">Project description</label>
-                <textarea id="minimalProjectDescription" rows="4" maxlength="1000">A project where I applied my programming skills and learned how to solve problems.</textarea>
+                <textarea id="minimalProjectDescription" rows="4" maxlength="1000" placeholder="Describe your featured project."></textarea>
 
                 <label for="minimalEmail">Email address</label>
-                <input id="minimalEmail" type="email" value="you@example.com" maxlength="150">
+                <input id="minimalEmail" type="email" placeholder="you@example.com" maxlength="150">
 
                 <div class="form-actions">
                     <button type="button" id="minimalReset" class="reset-btn">Reset</button>

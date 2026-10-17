@@ -461,9 +461,10 @@
 
     <!-- Shared Supabase configuration -->
     <script src="/js/supabase-config.js"></script>
+    <script src="/js/portfolio-access.js"></script>
 
     <!-- Homepage authentication -->
-    <script src="/js/main.js?v=3"></script>
+    <script src="/js/main.js?v=4"></script>
 
 </body>
 </html>

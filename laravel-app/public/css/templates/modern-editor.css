@@ -65,6 +65,12 @@ a {
     letter-spacing: -0.6px;
 }
 
+.brand img {
+    width: 34px;
+    height: 34px;
+    object-fit: contain;
+}
+
 .brand-mark {
     display: grid;
     place-items: center;

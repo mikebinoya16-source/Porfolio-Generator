@@ -228,7 +228,7 @@ document.addEventListener("DOMContentLoaded", function () {
         reader.readAsDataURL(file);
     });
 
-    // Reset the editor to its original sample values.
+    // Reset the editor to empty fields.
     // This does not delete the saved portfolio from Supabase.
     if (resetButton) {
         resetButton.addEventListener("click", function () {

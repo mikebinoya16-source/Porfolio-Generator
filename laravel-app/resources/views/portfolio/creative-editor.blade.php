@@ -9,7 +9,10 @@
 </head>
 <body>
 <header class="topbar">
-    <a class="brand" href="/templates">Portech<span>✿</span></a>
+    <a class="brand" href="/templates">
+        <img src="/images/logo.png" alt="">
+        <span>Portech</span>
+    </a>
     <a class="back-link" href="/templates">← Back to Templates</a>
 </header>
 
@@ -24,32 +27,32 @@
 
         <form id="creativeForm">
             <label for="creativeName">Your name</label>
-            <input id="creativeName" type="text" value="Your Name" maxlength="80">
+            <input id="creativeName" type="text" maxlength="80" placeholder="e.g. Alex Morgan">
 
             <label for="creativeTitle">What do you do?</label>
-            <input id="creativeTitle" type="text" value="Web Developer & Designer" maxlength="100">
+            <input id="creativeTitle" type="text" maxlength="100" placeholder="e.g. Web Developer &amp; Designer">
 
             <label for="creativePhoto">Your profile photo</label>
             <input id="creativePhoto" type="file" accept="image/*">
             <p class="hint">Optional · JPG, PNG or WEBP · up to 5 MB</p>
 
             <label for="creativeAbout">A little about you</label>
-            <textarea id="creativeAbout" rows="4" maxlength="1000">Hi! I'm a creative and curious person who enjoys building websites, learning new things, and turning simple ideas into something lovely.</textarea>
+            <textarea id="creativeAbout" rows="4" maxlength="1000" placeholder="Tell visitors a little about yourself."></textarea>
             <p class="counter"><span id="creativeAboutCount">0</span>/1000</p>
 
             <label for="creativeSkills">Your skills</label>
-            <input id="creativeSkills" type="text" value="HTML, CSS, JavaScript, PHP, Laravel, UI/UX">
+            <input id="creativeSkills" type="text" placeholder="e.g. HTML, CSS, JavaScript, UI/UX">
             <p class="hint">Use commas to separate your skills.</p>
 
             <label for="creativeProjectTitle">Featured project</label>
-            <input id="creativeProjectTitle" type="text" value="My Little Project" maxlength="100">
+            <input id="creativeProjectTitle" type="text" placeholder="e.g. My Portfolio Website" maxlength="100">
 
             <label for="creativeProjectDescription">Tell us about it</label>
-            <textarea id="creativeProjectDescription" rows="3" maxlength="1000">A simple and friendly web project made to help people stay organized and make everyday tasks easier.</textarea>
+            <textarea id="creativeProjectDescription" rows="3" maxlength="1000" placeholder="Describe what your project does."></textarea>
             <p class="counter"><span id="creativeProjectCount">0</span>/1000</p>
 
             <label for="creativeEmail">Contact email</label>
-            <input id="creativeEmail" type="email" value="you@example.com" maxlength="150">
+            <input id="creativeEmail" type="email" placeholder="you@example.com" maxlength="150">
 
             <div class="button-row">
                 <button type="button" id="creativeReset" class="button secondary">↺ Reset</button>
@@ -171,6 +174,7 @@
 
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 <script src="/js/supabase-config.js"></script>
+<script src="/js/portfolio-access.js"></script>
 <script src="/js/portfolio-storage.js"></script>
 <script src="/js/templates/creative-editor.js"></script>
 

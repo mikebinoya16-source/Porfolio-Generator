@@ -55,6 +55,29 @@ function showSignupPopup() {
     openPopup(signupPopup);
 }
 
+function getPostLoginDestination() {
+    const next = new URLSearchParams(window.location.search).get("next");
+
+    if (!next) return "/dashboard";
+
+    let destination;
+
+    try {
+        destination = new URL(next, window.location.origin);
+    } catch {
+        return "/dashboard";
+    }
+
+    if (
+        destination.origin !== window.location.origin ||
+        destination.pathname !== "/portfolio/create"
+    ) {
+        return "/dashboard";
+    }
+
+    return `${destination.pathname}${destination.search}`;
+}
+
 
 /* =========================
    OPEN AND CLOSE POPUPS
@@ -213,7 +236,7 @@ if (loginForm && supabaseClient) {
                 updateHeader(data.session);
                 closePopup(loginPopup);
 
-                window.location.href = "/dashboard";
+                window.location.href = getPostLoginDestination();
             } else {
                 alert(
                     "No active session was returned. " +
@@ -312,7 +335,7 @@ if (signupForm && supabaseClient) {
                 updateHeader(data.session);
                 closePopup(signupPopup);
 
-                window.location.href = "/dashboard";
+                window.location.href = getPostLoginDestination();
                 return;
             }
 
@@ -385,3 +408,7 @@ if (supabaseClient) {
 ========================= */
 
 checkLoginSession();
+
+if (new URLSearchParams(window.location.search).get("login") === "1") {
+    showLoginPopup();
+}

@@ -9,7 +9,10 @@
 </head>
 <body>
 <header class="editor-header">
-    <a class="brand" href="/templates"><span class="brand-mark">P</span> Portech</a>
+    <a class="brand" href="/templates">
+        <img src="/images/logo.png" alt="">
+        <span>Portech</span>
+    </a>
     <span class="editor-label">MODERN EDITOR</span>
     <a class="back-link" href="/templates">← Templates</a>
 </header>
@@ -24,33 +27,33 @@
 
         <form id="modernForm">
             <label for="modernName">Full name</label>
-            <input id="modernName" type="text" value="Alex Morgan" maxlength="70" placeholder="Your name">
+            <input id="modernName" type="text" maxlength="70" placeholder="e.g. Alex Morgan">
 
             <label for="modernRole">Professional title</label>
-            <input id="modernRole" type="text" value="Web Developer" maxlength="100" placeholder="e.g. IT Student">
+            <input id="modernRole" type="text" maxlength="100" placeholder="e.g. Web Developer">
 
             <label for="modernPhoto">Profile photo</label>
             <input id="modernPhoto" type="file" accept="image/*">
             <small class="field-hint">Choose an image up to 5 MB.</small>
 
             <label for="modernIntro">Short introduction</label>
-            <textarea id="modernIntro" rows="3" maxlength="300">I enjoy building clean, useful, and user-friendly digital experiences. I am always learning and looking for opportunities to improve my skills.</textarea>
+            <textarea id="modernIntro" rows="3" maxlength="300" placeholder="Write a short introduction about yourself."></textarea>
 
             <label for="modernAbout">About me</label>
-            <textarea id="modernAbout" rows="4" maxlength="600">I am a motivated and detail-oriented developer who enjoys solving problems and turning ideas into working projects. I value teamwork, continuous learning, and creating work that is simple to use.</textarea>
+            <textarea id="modernAbout" rows="4" maxlength="600" placeholder="Share your background, experience, and what you enjoy doing."></textarea>
 
             <label for="modernSkills">Skills</label>
-            <input id="modernSkills" type="text" value="HTML, CSS, JavaScript, Laravel, UI Design" maxlength="250">
+            <input id="modernSkills" type="text" maxlength="250" placeholder="e.g. HTML, CSS, JavaScript">
             <small class="field-hint">Separate each skill with a comma.</small>
 
             <label for="modernProject">Featured project</label>
-            <input id="modernProject" type="text" value="Personal Portfolio Website" maxlength="100">
+            <input id="modernProject" type="text" maxlength="100" placeholder="e.g. Personal Portfolio Website">
 
             <label for="modernProjectDescription">Project description</label>
-            <textarea id="modernProjectDescription" rows="3" maxlength="400">A personal website that presents my skills, projects, and background in one organized place.</textarea>
+            <textarea id="modernProjectDescription" rows="3" maxlength="400" placeholder="Describe your featured project."></textarea>
 
             <label for="modernEmail">Email address</label>
-            <input id="modernEmail" type="email" value="alex@example.com" maxlength="150" placeholder="you@example.com">
+            <input id="modernEmail" type="email" maxlength="150" placeholder="you@example.com">
 
             
             <div class="form-actions">
@@ -170,6 +173,7 @@
 
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 <script src="/js/supabase-config.js"></script>
+<script src="/js/portfolio-access.js"></script>
 <script src="/js/portfolio-storage.js"></script>
 <script src="/js/templates/modern-editor.js"></script>
 

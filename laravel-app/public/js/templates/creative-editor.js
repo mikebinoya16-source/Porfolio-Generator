@@ -185,7 +185,7 @@
         }
     });
 
-    // Reset the editor to its sample content.
+    // Reset the editor to empty fields.
     $('creativeReset').addEventListener('click', () => {
         Object.entries(fields).forEach(([key, field]) => {
             field.value = key === 'photo' ? '' : defaults[key];
@@ -196,7 +196,7 @@
 
         updatePreview();
 
-        showMessage('All reset! Your sample details are back. ✿');
+        showMessage('All fields have been cleared. ✿');
     });
 
     // Load an existing portfolio when the URL contains ?id=...

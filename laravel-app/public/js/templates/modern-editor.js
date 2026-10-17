@@ -142,7 +142,7 @@ document.getElementById('modernReset').addEventListener('click', () => {
 
     document.getElementById('modernPhotoPlaceholder').hidden = false;
 
-    modernMessage.textContent = 'Form reset to its original values.';
+    modernMessage.textContent = 'Form cleared.';
     modernUpdatePreview();
 });
 
