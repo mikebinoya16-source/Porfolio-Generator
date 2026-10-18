@@ -208,7 +208,7 @@
                     </p>
 
                     <a
-                        href="{{ route('portfolio.create', ['template' => 'creative']) }}"
+                        href="/portfolio/create?template=creative" 
                         class="template-button">
                         Choose Template
                     </a>
@@ -241,7 +241,7 @@
                     </p>
 
                     <a
-                        href="{{ route('portfolio.create', ['template' => 'minimal']) }}"
+                        href="/portfolio/create?template=minimal" 
                         class="template-button">
                         Choose Template
                     </a>
