@@ -56,17 +56,3 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 ## License
 
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
-
-## Deploying to Vercel
-
-The Laravel application lives in `laravel-app`. When importing this repository into Vercel, set the project root directory to `laravel-app` and use the **Other** framework preset. The Vercel PHP runtime configuration in `vercel.json` serves Laravel requests and routes the existing public assets; Vercel should run the `npm run build` build command.
-
-Before deploying, add these environment variables in the Vercel project settings for the Production environment:
-
-- `APP_KEY`: generate a production key with `php artisan key:generate --show` from this directory.
-- `APP_URL`: the deployed Vercel URL (or the custom domain).
-- `SUPABASE_URL`
-- `SUPABASE_PUBLISHABLE_KEY`
-- `SUPABASE_SERVICE_ROLE_KEY`
-
-Keep the Supabase service role key private: add it in Vercel's environment variable settings and never commit it to the repository. The deployment uses in-memory cache and sessions because Vercel functions do not have persistent local storage.
