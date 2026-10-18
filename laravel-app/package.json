@@ -5,6 +5,7 @@
     "scripts": {
         "build": "vite build",
         "dev": "vite"
+    
     },
     "devDependencies": {
         "@tailwindcss/vite": "^4.0.0",
@@ -16,4 +17,8 @@
     "optionalDependencies": {
         "@laravel/multiplex": "^0.4.1"
     }
+
+    
+     
+
 }
